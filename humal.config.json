@@ -1,0 +1,7 @@
+{
+  "entry": "src/main.hum",
+  "sourceDir": "src",
+  "module": "esm",
+  "env": "browser",
+  "webEntry": "index.html"
+}

@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    background: #0b1020;
+    color: #edf2ff;
+    font-family: Inter, system-ui, sans-serif;
+}
+
+.container {
+    width: min(100% - 32px, 1000px);
+    margin: 0 auto;
+    padding: 48px 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 64px;
+}
+
+.brand {
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.hero {
+    margin-bottom: 36px;
+}
+
+.eyebrow {
+    color: #8da8ff;
+    font-size: 19px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    margin: 12px 0;
+}
+
+.subtitle {
+    color: #96a4c3;
+    line-height: 1.7;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin: 32px 0 18px;
+}
+
+.toolbar h2 {
+    margin: 0;
+    font-size: 19px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    }
+
+.symbol {
+    color: #8290b1;
+    font-size: 12px;
+}
+
+.price {
+    margin: 28px 0 8px;
+    font-weight: 800;
+    overflow-wrap: anywhere;
+    color: green;
+    font-size: 25px;
+}
+
+.change {
+    font-size: 13px;
+}
+
+.divider {
+    height: 1px;
+    margin: 22px 0;
+    background: #293754;
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin-top: 12px;
+    color: #8e9cbb;
+    font-size: 12px;
+}
+
+.stat strong {
+    color: #dbe4ff;
+    text-align: right;
+}
+
+footer {
+    margin-top: 64px;
+    color: #72809f;
+    font-size: 12px;
+    text-align: center;
+}

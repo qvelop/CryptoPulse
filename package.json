@@ -1,0 +1,15 @@
+{
+  "name": "devdash",
+  "private": true,
+  "scripts": {
+    "dev": "humal dev:web",
+    "build": "humal build:web",
+    "dev:web": "humal dev:web",
+    "build:web": "humal build:web",
+    "check": "humal check"
+  },
+  "devDependencies": {
+    "@qvelop444/humal": "1.4.1",
+    "parcel": "^2.16.4"
+  }
+}

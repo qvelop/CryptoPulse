@@ -1,0 +1,92 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <link rel="stylesheet" href="style.css">
+  <title>CryptoPulse — Market Dashboard</title>
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <div class="brand">CryptoPulse</div>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">Crypto market overview</p>
+      <h1>The market at a glance.</h1>
+      <p class="subtitle">
+        Track crypto prices and daily market movements
+        in one simple dashboard.
+      </p>
+    </section>
+
+    <section>
+      <div class="toolbar">
+        <h2>Market overview</h2>
+      <button id="refresh" type="button">↻ Refresh prices</button>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <div class="coin">BITCOIN</div>
+          <div class="symbol">BTC / USDT</div>
+          <div class="price" id="btc-price">Loading...</div>
+          <div class="change" id="btc-change">—</div>
+          <div class="divider"></div>
+          <div class="stat">
+            <span>24h high</span>
+            <strong id="btc-high">—</strong>
+          </div>
+          <div class="stat">
+            <span>24h low</span>
+            <strong id="btc-low">—</strong>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="coin">ETHEREUM</div>
+          <div class="symbol">ETH / USDT</div>
+          <div class="price" id="eth-price">Loading...</div>
+          <div class="change" id="eth-change">—</div>
+          <div class="divider"></div>
+          <div class="stat">
+            <span>24h high</span>
+            <strong id="eth-high">—</strong>
+          </div>
+          <div class="stat">
+            <span>24h low</span>
+            <strong id="eth-low">—</strong>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="coin">SOLANA</div>
+          <div class="symbol">SOL / USDT</div>
+          <div class="price" id="sol-price">Loading...</div>
+          <div class="change" id="sol-change">—</div>
+          <div class="divider"></div>
+          <div class="stat">
+            <span>24h high</span>
+            <strong id="sol-high">—</strong>
+          </div>
+          <div class="stat">
+            <span>24h low</span>
+            <strong id="sol-low">—</strong>
+          </div>
+        </article>
+      </div>
+    <p id="status">Connecting to market data...</p>
+    </section>
+
+    <footer>
+      CryptoPulse | Built with Humal Web | Market data by Binance
+    </footer>
+  </main>
+
+  <script type="module" src="./src/main.hum"></script>
+</body>
+</html>

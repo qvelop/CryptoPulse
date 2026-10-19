@@ -1,0 +1,8 @@
+{
+  "extends": "@parcel/config-default",
+  "transformers": {
+    "*.hum": [
+      "./node_modules/@qvelop444/humal/src/parcel.js"
+    ]
+  }
+}
