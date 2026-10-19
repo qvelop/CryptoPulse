@@ -1,0 +1,50 @@
+
+web.document.title = "CryptoPulse — Market Dashboard"
+
+async fn loadTicker(symbol, prefix)
+    try
+        let url = "https://data-api.binance.vision/api/v3/ticker/24hr?symbol=" + symbol
+        let response = await web.fetch(url)
+
+        if !response.ok
+            throw new Error("Market request failed")
+
+        let data = await response.json()
+
+        let price = Number(data.lastPrice).toFixed(2)
+        let high = Number(data.highPrice).toFixed(2)
+        let low = Number(data.lowPrice).toFixed(2)
+        let change = Number(data.priceChangePercent)
+        let sign = change >= 0 ? "+" : ""
+
+        web.text("#" + prefix + "-price", "$" + price)
+        web.text("#" + prefix + "-change", sign + change.toFixed(2) + "% (24h)")
+        web.text("#" + prefix + "-high", "$" + high)
+        web.text("#" + prefix + "-low", "$" + low)
+
+        if change >= 0
+            web.element("#" + prefix + "-change").style.color = "#50dfaa"
+        else
+            web.element("#" + prefix + "-change").style.color = "#fb7185"
+
+        web.text("#status", "Last updated: " + new Date().toLocaleTimeString())
+
+    catch
+        web.text("#" + prefix + "-price", "Unavailable")
+        web.text("#" + prefix + "-change", "Could not load price")
+        web.text("#status", "Some prices could not load. Check your connection and refresh.")
+
+fn refreshPrices()
+    web.text("#status", "Loading market data...")
+
+    web.text("#btc-price", "Loading...")
+    web.text("#eth-price", "Loading...")
+    web.text("#sol-price", "Loading...")
+
+    loadTicker("BTCUSDT", "btc")
+    loadTicker("ETHUSDT", "eth")
+    loadTicker("SOLUSDT", "sol")
+
+web.button("#refresh").onClick(refreshPrices)
+
+refreshPrices()
