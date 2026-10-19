@@ -23,9 +23,9 @@ async fn loadTicker(symbol, prefix)
         web.text("#" + prefix + "-low", "$" + low)
 
         if change >= 0
-            web.element("#" + prefix + "-change").style.color = "#50dfaa"
+            web.element("#" + prefix + "-change")
         else
-            web.element("#" + prefix + "-change").style.color = "#fb7185"
+            web.element("#" + prefix + "-change")
 
         web.text("#status", "Last updated: " + new Date().toLocaleTimeString())
 
